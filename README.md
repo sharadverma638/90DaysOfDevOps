@@ -10,9 +10,8 @@ This repository is my personal record of the **90 Days of DevOps Challenge - 202
 
 | Link | Description |
 |---|---|
-| [My 2026 Challenge](./2026/) | All my work, organized by topic |
-| [Original Challenge Repo](https://github.com/TrainWithShubham/90DaysOfDevOps/tree/master/2026) | Created by Shubham Londhe (TrainWithShubham) |
-| [Sharad Verma - All Links](https://sharadverma.carrd.co/) | My profiles, projects, and contact |
+| [My 2026 Challenge](./2026/) | All my work, day-wise |
+| [Original Challenge Repository](https://github.com/TrainWithShubham/90DaysOfDevOps) | Created by Shubham Londhe (TrainWithShubham) |
 
 ---
 
@@ -81,7 +80,7 @@ Every topic here is backed by hands-on labs and real troubleshooting - not just 
 
 ## 🙏🏻 Acknowledgement
 
-This challenge was created by **[Shubham Londhe](https://github.com/LondheShubham153) (TrainWithShubham)**. My thanks to him for the structure, guidance, and inspiration behind this journey.
+This challenge was created by **[Shubham Londhe](https://github.com/LondheShubham153) sir (TrainWithShubham)**. My thanks to him for the structure, guidance, and inspiration behind this journey.
 
 ---
 
