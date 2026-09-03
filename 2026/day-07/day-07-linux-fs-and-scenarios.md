@@ -1,4 +1,4 @@
-# Day 07 - Linux File System Hierarchy and Scenario-Based Practice
+# Linux File System Hierarchy and Scenario-Based Practice
 
 > **Note:** Long command outputs have been shortened for readability. Only relevant lines are shown.
 
