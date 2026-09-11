@@ -1,4 +1,4 @@
-# Day 18 - Shell Scripting: Functions and Intermediate Concepts
+# Shell Scripting: Functions and Intermediate Concepts
 
 ---
 
