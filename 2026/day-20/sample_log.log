@@ -1,0 +1,50 @@
+2026-09-11 19:21:00,102 [kube-system] INFO  k8s.io.DeploymentController - Scaling deployment 'api-gateway' from 3 to 5 replicas.
+2026-09-11 19:21:01,450 [kube-system] INFO  k8s.io.Kubelet - Pulling image 'nginx:1.25.2-alpine' for pod 'api-gateway-7f89d5b2-abc12'.
+2026-09-11 19:21:03,891 [kube-system] INFO  k8s.io.Kubelet - Successfully pulled image 'nginx:1.25.2-alpine' in 2.44s.
+2026-09-11 19:21:04,110 [kube-system] INFO  k8s.io.Kubelet - Created container 'nginx-ingress' inside pod 'api-gateway-7f89d5b2-abc12'.
+2026-09-11 19:21:04,215 [kube-system] INFO  k8s.io.Kubelet - Started container 'nginx-ingress' inside pod 'api-gateway-7f89d5b2-abc12'.
+2026-09-11 19:21:05,600 [istio-proxy] INFO  envoy.router - [api-gateway-7f89d5b2-abc12] Inbound connection established from ingress-gateway IP 10.244.0.1.
+2026-09-11 19:21:07,311 [api-gateway] INFO  com.devops.gateway.Router - Route table updated. 24 active microservice routes registered.
+2026-09-11 19:21:10,019 [auth-svc] INFO  com.devops.auth.TokenValidator - Initialized JWKS caching provider. Refresh interval: 60m.
+2026-09-11 19:21:12,450 [user-svc] INFO  com.devops.user.DBConfig - HikariPool-1 - Starting connection pool to database: postgres-primary.internal.
+2026-09-11 19:21:14,203 [user-svc] INFO  com.devops.user.DBConfig - HikariPool-1 - Start completed. Active connections: 25, Idle: 5.
+2026-09-11 19:21:15,880 [argocd-server] INFO  argoproj.io.ApplicationController - Syncing application 'production-cluster-apps' with git commit '8a1b3c4f'.
+2026-09-11 19:21:16,112 [argocd-server] INFO  argoproj.io.ApplicationController - Application 'production-cluster-apps' is InSync and Healthy.
+2026-09-11 19:21:18,540 [prometheus] INFO  io.prometheus.scraper - Scraped target 'order-svc:9090/metrics' successfully. Response time: 42ms.
+2026-09-11 19:21:20,005 [order-svc] WARN  com.devops.order.CircuitBreaker - Redis cache 'order_cache' read latency exceeded threshold: 120ms.
+2026-09-11 19:21:21,110 [order-svc] WARN  com.devops.order.CircuitBreaker - Circuit breaker 'redis-read-pool' transitioned to HALF-OPEN state.
+2026-09-11 19:21:23,892 [payment-svc] INFO  com.devops.payment.StripeClient - Executing POST request to https://stripe.com.
+2026-09-11 19:21:25,310 [payment-svc] ERROR com.devops.payment.StripeClient - SSL Handshake failed with ://stripe.com. Remote certificate expired or untrusted.
+2026-09-11 19:21:25,315 [payment-svc] ERROR com.devops.payment.Processor - Failed checkout pipeline for tx_9923182. Aborting step.
+2026-09-11 19:21:27,001 [fluent-bit] INFO  fluent-bit.io.Output - Flushing buffered logs to Elasticsearch endpoint: https://es-cluster.internal:9200.
+2026-09-11 19:21:28,455 [datadog-agent] INFO  datadog.agent.Collector - Core metrics payload transmitted successfully. System CPU load: 42.1%.
+2026-09-11 19:21:30,900 [notification-svc] INFO  com.devops.notif.KafkaConsumer - Kafka partition consumer assigned: topic=user-notifications, partition=2.
+2026-09-11 19:21:32,112 [notification-svc] INFO  com.devops.notif.KafkaConsumer - Committing offset 1944821 for group 'notif-group-prod'.
+2026-09-11 19:21:35,441 [inventory-svc] WARN  com.devops.inv.InventoryController - Optimistic locking failure for product_id 8821. Retrying query...
+2026-09-11 19:21:37,890 [inventory-svc] INFO  com.devops.inv.InventoryController - Retry successful for product_id 8821. Stock updated.
+2026-09-11 19:21:40,012 [kube-system] INFO  k8s.io.DeploymentController - Scaling deployment 'api-gateway' from 5 to 6 replicas due to CPU utilization > 80%.
+2026-09-11 19:21:42,501 [istio-proxy] WARN  envoy.config - Dynamic route configuration took longer than expected: 450ms.
+2026-09-11 19:21:45,119 [cart-svc] ERROR com.devops.cart.SessionStore - Connection lost to Redis Sentinel master 'mymaster'.
+2026-09-11 19:21:45,122 [cart-svc] ERROR com.devops.cart.SessionStore - Redis write command failed: JedisConnectionException: Could not get a resource from the pool.
+2026-09-11 19:21:46,200 [cart-svc] WARN  com.devops.cart.SessionStore - Reconnecting to Redis failover replica: 10.244.3.45.
+2026-09-11 19:21:48,310 [cart-svc] INFO  com.devops.cart.SessionStore - Connection re-established with Redis failover master.
+2026-09-11 19:21:50,004 [terraform-operator] INFO  tf.operator.Runner - Executing automatic drift detection for workspace 'prod-vpc-infrastructure'.
+2026-09-11 19:21:51,891 [terraform-operator] INFO  tf.operator.Runner - Infrastructure state matches local state. No drift detected.
+2026-09-11 19:21:55,102 [cert-manager] INFO  io.certmanager.Webhook - Issuing certificate request for domain: ://company.com.
+2026-09-11 19:21:57,440 [cert-manager] INFO  io.certmanager.Webhook - Certificate issued successfully via Let's Encrypt CA.
+2026-09-11 19:22:00,001 [sys-monitor] INFO  com.devops.mon.HostChecker - Checking storage nodes block devices health metrics...
+2026-09-11 19:22:01,892 [db-pool] WARN  com.devops.db.ProxySQL - Backend host postgres-replica-2.internal delayed by 4.2 seconds behind primary node.
+2026-09-11 19:22:03,110 [db-pool] ERROR com.devops.db.ProxySQL - Removing laggy node postgres-replica-2.internal from load balancer read-pool.
+2026-09-11 19:22:05,441 [jenkins-agent-1] INFO  org.jenkinsci.plugins.GitSCM - Cloning Git repository https://github.com.
+2026-09-11 19:22:10,210 [jenkins-agent-1] INFO  org.jenkinsci.plugins.DockerBuild - Executing docker build pipeline step. Tagging image as 'core-api:v2.4.1'.
+2026-09-11 19:22:15,890 [jenkins-agent-1] INFO  org.jenkinsci.plugins.DockerBuild - Successfully pushed layer sha256:d8a23b to AWS ECR registry.
+2026-09-11 19:22:18,111 [kube-system] WARN  k8s.io.Kubelet - Node 'node-worker-pool-3b' is experiencing DiskPressure.
+2026-09-11 19:22:20,005 [kube-system] CRITICAL k8s.io.EvictionManager - Eviction threshold triggered on node 'node-worker-pool-3b'. Free space < 5%.
+2026-09-11 19:22:20,012 [kube-system] WARN  k8s.io.EvictionManager - Evicting pod 'analytics-worker-2831a' from node 'node-worker-pool-3b'.
+2026-09-11 19:22:20,500 [kube-system] WARN  k8s.io.EvictionManager - Evicting pod 'search-indexer-9921b' from node 'node-worker-pool-3b'.
+2026-09-11 19:22:21,110 [vault-svc] ERROR com.hashicorp.vault.Storage - Raft storage layer failed to write logs to disk. I/O error: No space left on device.
+2026-09-11 19:22:21,115 [vault-svc] CRITICAL com.hashicorp.vault.Core - Vault step-down triggered! Core cluster state is sealed due to unrecoverable storage engine failure.
+2026-09-11 19:22:22,400 [api-gateway] ERROR com.devops.gateway.Router - Downstream dependency validation failed: Vault service returned HTTP 503 Service Unavailable.
+2026-09-11 19:22:22,405 [api-gateway] CRITICAL com.devops.gateway.Router - Critical service disruption! Core credentials engine unreachable. Falling back to safety circuit.
+2026-09-11 19:22:24,891 [pagerduty-forwarder] INFO  com.devops.alert.PDClient - Dispatching High-Severity Incident to PagerDuty team: 'ONCALL-DEV-PLATFORM'.
+2026-09-11 19:22:25,102 [pagerduty-forwarder] INFO  com.devops.alert.PDClient - Incident acknowledged with ID: INC-882194. Notification sent via SMS/Slack.
