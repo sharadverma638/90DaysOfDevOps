@@ -1,0 +1,56 @@
+services:
+  web:
+    build: ./app
+    ports:
+      - "5000:5000"
+    environment:
+      DB_HOST: db
+      DB_USER: devops
+      DB_PASSWORD: devops123
+      DB_NAME: devops
+      REDIS_HOST: redis
+    depends_on:
+      db:
+        condition: service_healthy
+    networks:
+      - app-network
+    labels:
+      com.90days.service: "web"
+      com.90days.category: "application"
+
+  db:
+    image: mysql:8.0
+    restart: always
+    environment:
+      MYSQL_DATABASE: devops
+      MYSQL_USER: devops
+      MYSQL_PASSWORD: devops123
+      MYSQL_ROOT_PASSWORD: root123
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-uroot", "-proot123"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+    volumes:
+      - db-data:/var/lib/mysql
+    networks:
+      - app-network
+    labels:
+      com.90days.service: "database"
+      com.90days.category: "storage"
+
+  redis:
+    image: redis:alpine
+    networks:
+      - app-network
+    labels:
+      com.90days.service: "cache"
+      com.90days.category: "cache"
+
+networks:
+  app-network:
+    name: day34-app-network
+
+volumes:
+  db-data:
+    name: day34-db-data
