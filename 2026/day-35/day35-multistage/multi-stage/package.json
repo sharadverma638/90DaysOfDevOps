@@ -1,0 +1,7 @@
+{
+  "name": "day35-multistage",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "mkdir -p dist && cp index.js dist/index.js"
+  }
+}
