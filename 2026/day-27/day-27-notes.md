@@ -58,7 +58,7 @@ I reviewed my repositories and checked whether they clearly represent my learnin
 | Repository          | Purpose                                 |
 | ------------------- | --------------------------------------- |
 | `90DaysOfDevOps` | Daily DevOps learning and hands-on work |
-| `sv-opsforge`     | DevOps shell scripts, Python automation tools, and daily ops utilities |
+| `sv-opsquill`     | DevOps shell scripts, Python automation tools, and daily ops utilities |
 | `sv-opslibrary`      | Structured DevOps notes, video links, and learning resources |
 
 Each repository should have:
