@@ -1,0 +1,13 @@
+name: Sharad
+role: DevOps Learner
+experience_years: 0
+learning: true
+
+tools:
+  - Git
+  - Docker
+  - GitHub Actions
+  - Kubernetes
+  - Terraform
+
+hobbies: [coding, reading, learning]
