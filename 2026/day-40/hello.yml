@@ -1,26 +1,27 @@
 name: Hello GitHub Actions
 
-on: push
+on: 
+ push:
 
 jobs:
-  greet:
-    runs-on: ubuntu-latest
+ greet:
+  runs-on: ubuntu-latest
 
-    steps:
-      - name: Check out the code
-        uses: actions/checkout@v4
+  steps:
+   - name: Check out the code
+     uses: actions/checkout@v4
 
-      - name: Print greeting
-        run: echo "Hello from GitHub Actions!"
+   - name: Print greeting
+     run: 'echo "Hello from GitHub Actions!"'
 
-      - name: Print current date and time
-        run: date
+   - name: Print current date and time
+     run: date
 
-      - name: Print triggering branch
-        run: echo "Branch: ${{ github.ref_name }}"
+   - name: Print triggering branch
+     run: 'echo "Branch: ${{ github.ref_name }}"'
 
-      - name: List repository files
-        run: ls -la
+   - name: List repository files
+     run: ls -la
 
-      - name: Print runner operating system
-        run: echo "Runner OS: ${{ runner.os }}"
+   - name: Print runner operating system
+     run: 'echo "Runner OS: ${{ runner.os }}"'
