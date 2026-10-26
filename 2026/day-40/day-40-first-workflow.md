@@ -4,7 +4,7 @@
 
 ## Task 1: Set Up
 
-Created a public GitHub repository named `github-actions-practice` and cloned it locally.
+Created a public GitHub repository named `devops-sandbox` and cloned it locally.
 
 Created the workflow directory:
 
