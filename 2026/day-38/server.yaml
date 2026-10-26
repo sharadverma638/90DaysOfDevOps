@@ -1,0 +1,21 @@
+server:
+  name: devops-app-server
+  ip: 192.168.1.10
+  port: 8080
+
+database:
+  host: db.internal
+  name: hospital_management
+  credentials:
+    user: app_user
+    password: devops123
+
+startup_script: |
+  #!/bin/bash
+  echo "Starting application server"
+  systemctl start nginx
+
+startup_script_folded: >
+  echo "Starting application server"
+  echo "Checking required services"
+  echo "Startup configuration loaded"
