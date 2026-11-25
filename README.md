@@ -90,4 +90,4 @@ If this repository is useful for your own DevOps learning, a **star** is appreci
 
 ---
 
-**Let's Connect: https://sharadverma.carrd.co/**
+**Let's Connect: https://sharadverma.vercel.app/links**
